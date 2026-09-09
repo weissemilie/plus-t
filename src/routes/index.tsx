@@ -31,11 +31,6 @@ export const Route = createFileRoute("/")({
             Det bliver intenst. Det bliver krævende. Det bliver årets vildeste
             efterårsferie! Er du klar?
           </p>
-          <Button asChild size="lg" variant="brand" className="mt-4 rounded-full">
-            <a href={SIGNUP_URL} target="_blank" rel="noopener noreferrer">
-              Tilmeld dig nu
-            </a>
-          </Button>
         </div>
       </div>
 
@@ -51,9 +46,20 @@ export const Route = createFileRoute("/")({
           Det bliver intenst. Det bliver krævende. Det bliver årets vildeste
           efterårsferie! Er du klar?
         </p>
-        <Button asChild size="lg" variant="brand" className="mt-2 rounded-full">
+      </div>
+
+      {/* Stor flydende tilmeldingsknap */}
+      <div className="fixed bottom-6 left-6 z-40">
+        <span className="absolute inset-0 rounded-full bg-brand-green opacity-75 motion-safe:animate-ping" />
+        <Button
+          asChild
+          variant="brand"
+          className="relative h-24 w-24 rounded-full p-0 text-center text-sm leading-tight shadow-2xl transition-transform hover:scale-105 md:h-36 md:w-36 md:text-base"
+        >
           <a href={SIGNUP_URL} target="_blank" rel="noopener noreferrer">
-            Tilmeld dig nu
+            Tilmeld
+            <br />
+            dig nu!
           </a>
         </Button>
       </div>
