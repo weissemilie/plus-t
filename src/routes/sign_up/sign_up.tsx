@@ -19,6 +19,12 @@ export const Route = createFileRoute("/sign_up/sign_up")({
             Sådan tilmelder du dig PLUS T
           </h2>
           <p>
+            Tilmeld dig på medlemsservice her{" "}
+            <a href="https://medlem.dds.dk/event/id/69596/register">
+              Gå til medlemsservice
+            </a>
+          </p>
+          <p>
             Tilmeldingen til PLUS T åbner midt/slut maj, så sæt kryds i
             kalenderen allerede nu, hvis du vil sikre dig en plads på årets
             fedeste kursus.
@@ -26,7 +32,9 @@ export const Route = createFileRoute("/sign_up/sign_up")({
           <p>
             Når tilmeldingen åbner, foregår det gennem Det Danske Spejderkorps'
             hjemmeside. Du finder alt det praktiske og selve tilmeldingen her:
-            https://dds.dk/arrangement/plus-start-plus-t-1{" "}
+            <a href="https://dds.dk/arrangement/plus-start-plus-t-1">
+              Gå til kursusbeskrivelse
+            </a>
           </p>
           <p>
             Indtil da kan du følge med på vores sociale medier, hvor vi giver
