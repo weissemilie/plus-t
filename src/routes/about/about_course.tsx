@@ -1,10 +1,20 @@
 import { createFileRoute } from "@tanstack/react-router";
 export const Route = createFileRoute("/about/about_course")({
+  head: () => ({
+    meta: [
+      { title: "Forberedelse inden kurset | Plus T" },
+      {
+        name: "description",
+        content:
+          "Sådan forbereder du dig til PLUS T: gå en tur, svøm en tur, tjek dit grej, pak vandtæt og læs deltagerbrevet grundigt inden afgang.",
+      },
+    ],
+  }),
   component: () => (
     <div>
       <div className="flex flex-col items-center px-6 md:pt-16 lg:px-40">
         <div className="max-w-3xl">
-          <h2 className="text-2xl md:text-[42px]">Forberedelse inden kurset</h2>
+          <h1 className="text-2xl md:text-[42px]">Forberedelse inden kurset</h1>
           <h2>1. Gå en tur</h2>
           <p>
             På PLUS T skal du kunne gå mindst 50 km på en uge med al din

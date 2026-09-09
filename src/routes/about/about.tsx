@@ -1,5 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
 export const Route = createFileRoute("/about/about")({
+  head: () => ({
+    meta: [
+      { title: "Om PLUS T | Plus T" },
+      {
+        name: "description",
+        content:
+          "PLUS T er et spejderkursus for dig, der vil mere end det sædvanlige. En uge i efterårsferien fyldt med udfordringer, fællesskab og oplevelser du ikke glemmer.",
+      },
+    ],
+  }),
   component: () => (
     <div className="flex min-h-[calc(100vh-130px)] items-center justify-center">
       <div className="layout:flex-row flex w-full max-w-[1520px] flex-col items-center gap-8">
@@ -14,7 +24,7 @@ export const Route = createFileRoute("/about/about")({
 
         {/* Højre kolonne - Tekst (nedenunder på mobil) */}
         <div className="layout:w-2/5 layout:pr-12 layout:pl-0 px-6 text-white">
-          <h2 className="text-[22px] md:text-[38px]">Om PLUS T</h2>
+          <h1 className="text-[22px] md:text-[38px]">Om PLUS T</h1>
           <p>
             PLUS T er et spejderkursus for dig, der vil mere end det sædvanlige.
             En uge i efterårsferien fyldt med udfordringer, fællesskab og

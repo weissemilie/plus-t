@@ -1,11 +1,21 @@
 import { createFileRoute } from "@tanstack/react-router";
 export const Route = createFileRoute("/sign_up/guide_for_sign_up")({
+  head: () => ({
+    meta: [
+      { title: "Guide til at komme på PLUS T | Plus T" },
+      {
+        name: "description",
+        content:
+          "Guide til tilmelding, betaling og refusion for PLUS T - så du hurtigst muligt kan komme på seniorspejderkurset.",
+      },
+    ],
+  }),
   component: () => (
     <div className="flex flex-col items-center px-6 pt-8 md:px-20 md:pt-16 lg:px-40">
       <div className="max-w-4xl">
-        <h2 className="text-2xl md:text-[42px]">
+        <h1 className="text-2xl md:text-[42px]">
           Guide til at komme på Plus T
-        </h2>
+        </h1>
         <p>
           Kunne du tænke dig at deltage på PLUS T, men synes, at det er lidt
           uoverskueligt med de kedelige ting som tilmelding, betaling og

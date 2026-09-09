@@ -41,6 +41,16 @@ const images2025 = [
 ];
 
 export const Route = createFileRoute("/past_courses/past2025")({
+  head: () => ({
+    meta: [
+      { title: "PLUS T 2025 | Plus T" },
+      {
+        name: "description",
+        content:
+          "PLUS T 2025 startede i Viborg og bragte deltagerne på ekspedition mod Grønland - 100 km gåtur og isklatring undervejs.",
+      },
+    ],
+  }),
   component: () => (
     <div className="flex min-h-[calc(100vh-130px)] items-center justify-center">
       <div className="layout:flex-row flex w-full max-w-[1520px] flex-col items-center gap-8">
@@ -51,7 +61,7 @@ export const Route = createFileRoute("/past_courses/past2025")({
 
         {/* Højre kolonne - Tekst (nedenunder på mobil) */}
         <div className="layout:w-2/5 layout:pr-6 layout:pl-0 px-6 text-white">
-          <h2 className="text-[22px] md:text-[38px]">PLUS T 2025</h2>
+          <h1 className="text-[22px] md:text-[38px]">PLUS T 2025</h1>
           <p>
             PLUS T 2025 startede i Viborg. Her blev deltagerne klar over, at de
             havde fået muligheden for at komme på ekspedition til Grønland,

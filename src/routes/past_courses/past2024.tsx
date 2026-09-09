@@ -38,6 +38,16 @@ const images2025 = [
 ];
 
 export const Route = createFileRoute("/past_courses/past2024")({
+  head: () => ({
+    meta: [
+      { title: "PLUS T 2024 | Plus T" },
+      {
+        name: "description",
+        content:
+          "PLUS T 2024 startede i Aarhus og bragte deltagerne til Mols Bjerge Nationalpark - 80 km gåtur og en hjemmebygget tømmerflåde.",
+      },
+    ],
+  }),
   component: () => (
     <div className="flex min-h-[calc(100vh-130px)] items-center justify-center">
       <div className="layout:flex-row flex w-full max-w-[1520px] flex-col items-center gap-8">
@@ -48,7 +58,7 @@ export const Route = createFileRoute("/past_courses/past2024")({
 
         {/* Højre kolonne - Tekst (nedenunder på mobil) */}
         <div className="layout:w-2/5 layout:pr-6 layout:pl-0 px-6 text-white">
-          <h2 className="text-[22px] md:text-[38px]">PLUS T 2024</h2>
+          <h1 className="text-[22px] md:text-[38px]">PLUS T 2024</h1>
           <p>
             PLUS T 2024 startede i Aarhus, men det var ikke meget deltagerne fik
             set til smilets by - de blev nemlig sejlet ud i Aarhus Bugt for at

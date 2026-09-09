@@ -3,22 +3,63 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Plus T</title>
+    <!--
+      The tags below marked data-default are static fallbacks for crawlers/scrapers that
+      don't execute JavaScript (e.g. most social-preview bots). Once React mounts, __root.tsx
+      removes them and TanStack Router's <HeadContent /> takes over with per-route values -
+      this avoids ending up with duplicate <meta>/<title> tags for JS-executing visitors.
+    -->
+    <title data-default>Plus T</title>
+    <meta
+      data-default
+      name="description"
+      content="PLUS T er et seniorspejderkursus i Det Danske Spejderkorps for spejdere mellem 16 og 23 år. En uge i efterårsferien fyldt med adventurespejd, udfordringer og fællesskab."
+    />
+    <link data-default rel="canonical" href="https://plust.dk/" />
+
+    <meta data-default property="og:type" content="website" />
+    <meta data-default property="og:site_name" content="Plus T" />
+    <meta data-default property="og:title" content="Plus T" />
+    <meta
+      data-default
+      property="og:description"
+      content="PLUS T er et seniorspejderkursus i Det Danske Spejderkorps for spejdere mellem 16 og 23 år. En uge i efterårsferien fyldt med adventurespejd, udfordringer og fællesskab."
+    />
+    <meta data-default property="og:url" content="https://plust.dk/" />
+    <meta data-default property="og:image" content="https://plust.dk/homepage/plus_carousel8.jpg" />
+    <meta data-default property="og:locale" content="da_DK" />
+
+    <meta data-default name="twitter:card" content="summary_large_image" />
+    <meta data-default name="twitter:title" content="Plus T" />
+    <meta
+      data-default
+      name="twitter:description"
+      content="PLUS T er et seniorspejderkursus i Det Danske Spejderkorps for spejdere mellem 16 og 23 år. En uge i efterårsferien fyldt med adventurespejd, udfordringer og fællesskab."
+    />
+    <meta data-default name="twitter:image" content="https://plust.dk/homepage/plus_carousel8.jpg" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Plus T",
+        "url": "https://plust.dk/",
+        "logo": "https://plust.dk/homepage/plus_carousel8.jpg",
+        "description": "PLUS T er et seniorspejderkursus i Det Danske Spejderkorps for spejdere mellem 16 og 23 år.",
+        "sameAs": [
+          "https://www.facebook.com/plus.t.dds",
+          "https://www.instagram.com/plustspejder/"
+        ]
+      }
+    </script>
+
     <script
       src="https://track.madselkjaer.dk/api/script.js"
       data-site-id="669f04cfae56"
       defer
     ></script>
   </head>
-  <body
-    class="min-h-screen w-full bg-white text-slate-900 dark:bg-neutral-900 dark:text-white"
-    emilieweiss
-    marked
-    this
-    conversation
-    as
-    resolved.
-  >
+  <body class="min-h-screen w-full bg-white text-slate-900 dark:bg-neutral-900 dark:text-white">
     <div id="root" class="w-full"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
