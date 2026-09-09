@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { TextLink } from "@/components/ui/text-link";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
@@ -39,11 +40,13 @@ export const Route = createFileRoute("/contact")({
             </p>
             <ul className="mt-2 list-none text-center leading-snug md:mt-4">
               <li className="font-semibold">Kontakt</li>
-              <li className="mb-4; text-sm font-light md:text-base">
-                Mail: aksel.buur@hotmail.com
+              <li className="mb-4 text-sm font-light md:text-base">
+                Mail: <TextLink href="mailto:aksel.buur@hotmail.com">
+                  aksel.buur@hotmail.com
+                </TextLink>
               </li>
-              <li className="mb-4; text-sm font-light md:text-base">
-                Tlf.: 42240534
+              <li className="mb-4 text-sm font-light md:text-base">
+                Tlf.: <TextLink href="tel:+4542240534">42240534</TextLink>
               </li>
             </ul>
           </div>
@@ -63,11 +66,13 @@ export const Route = createFileRoute("/contact")({
             </p>
             <ul className="mt-2 list-none text-center leading-snug md:mt-4">
               <li className="font-semibold">Kontakt</li>
-              <li className="mb-4; text-sm font-light md:text-base">
-                Mail: thea.swane@gmail.com
+              <li className="mb-4 text-sm font-light md:text-base">
+                Mail: <TextLink href="mailto:thea.swane@gmail.com">
+                  thea.swane@gmail.com
+                </TextLink>
               </li>
-              <li className="mb-4; text-sm font-light md:text-base">
-                Tlf.: 21152974{" "}
+              <li className="mb-4 text-sm font-light md:text-base">
+                Tlf.: <TextLink href="tel:+4521152974">21152974</TextLink>
               </li>
             </ul>
           </div>

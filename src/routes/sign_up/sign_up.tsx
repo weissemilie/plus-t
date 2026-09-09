@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { TextLink } from "@/components/ui/text-link";
 
 export const Route = createFileRoute("/sign_up/sign_up")({
   head: () => ({
@@ -30,9 +31,12 @@ export const Route = createFileRoute("/sign_up/sign_up")({
           </h1>
           <p>
             Tilmeld dig på medlemsservice her{" "}
-            <a href="https://medlem.dds.dk/event/id/69596/register">
+            <TextLink
+              href="https://medlem.dds.dk/event/id/69596/register"
+              external
+            >
               Gå til medlemsservice
-            </a>
+            </TextLink>
           </p>
           <p>
             Tilmeldingen til PLUS T åbner midt/slut maj, så sæt kryds i
@@ -41,10 +45,13 @@ export const Route = createFileRoute("/sign_up/sign_up")({
           </p>
           <p>
             Når tilmeldingen åbner, foregår det gennem Det Danske Spejderkorps'
-            hjemmeside. Du finder alt det praktiske og selve tilmeldingen her:
-            <a href="https://dds.dk/arrangement/plus-start-plus-t-1">
+            hjemmeside. Du finder alt det praktiske og selve tilmeldingen her:{" "}
+            <TextLink
+              href="https://dds.dk/arrangement/plus-start-plus-t-1"
+              external
+            >
               Gå til kursusbeskrivelse
-            </a>
+            </TextLink>
           </p>
           <p>
             Indtil da kan du følge med på vores sociale medier, hvor vi giver
