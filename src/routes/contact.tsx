@@ -1,5 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
 export const Route = createFileRoute("/contact")({
+  head: () => ({
+    meta: [
+      { title: "Kontakt PLUS T | Plus T" },
+      {
+        name: "description",
+        content:
+          "Har du spørgsmål til PLUS T? Kontakt en af årets kursusledere, som med glæde svarer på alle jeres spørgsmål.",
+      },
+    ],
+  }),
   component: () => (
     <>
       <div className="mb-3 flex flex-col items-center gap-2 px-4 pt-2 md:mb-6 md:gap-6 md:pt-8">

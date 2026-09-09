@@ -1,5 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
 export const Route = createFileRoute("/past_courses/past_courses")({
+  head: () => ({
+    meta: [
+      { title: "Tidligere kurser | Plus T" },
+      {
+        name: "description",
+        content:
+          "Dyk ned i tidligere års PLUS T-kurser og få et indtryk af, hvad kurset har at byde på - fra Plan T til i dag.",
+      },
+    ],
+  }),
   component: () => (
     <div className="flex min-h-[calc(100vh-130px)] items-center justify-center">
       <div className="layout:flex-row flex w-full max-w-[1520px] flex-col items-center gap-8">
@@ -14,7 +24,7 @@ export const Route = createFileRoute("/past_courses/past_courses")({
 
         {/* Højre kolonne - Tekst (nedenunder på mobil) */}
         <div className="layout:w-2/5 layout:pr-12 layout:pl-0 px-6 text-white">
-          <h2 className="text-[22px] md:text-[38px]">Tidligere kurser</h2>
+          <h1 className="text-[22px] md:text-[38px]">Tidligere kurser</h1>
           <p>
             Før PLUS T blev det seniorkursus vi er i dag, var vi et Plan kursus,
             og teamets historie går langt tilbage i tiden. Teamet har eksisteret
