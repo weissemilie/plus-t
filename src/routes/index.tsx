@@ -49,7 +49,7 @@ export const Route = createFileRoute("/")({
       </div>
 
       {/* Stor flydende tilmeldingsknap */}
-      <div className="fixed bottom-6 left-6 z-40">
+      <div className="fixed bottom-10 left-8 z-40">
         <span className="absolute inset-0 rounded-full bg-brand-green opacity-75 motion-safe:animate-ping" />
         <Button
           asChild
