@@ -23,7 +23,7 @@ export const Route = createFileRoute("/")({
 
       {/* Mobil tekstboks - kun synlig på mobil */}
       <div className="w-full p-6 text-white md:hidden">
-        <h2>Testtesttest</h2>
+        <h2>ALT ANDET END HVERDAG!</h2>
         <p>
           Er du klar til en uge fyldt med vilde udfordringer, nye venskaber og
           oplevelser, du aldrig glemmer? Så tag på PLUS T, seniorkurset hvor vi
