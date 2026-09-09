@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { TextLink } from "@/components/ui/text-link";
 export const Route = createFileRoute("/sign_up/guide_for_sign_up")({
   head: () => ({
     meta: [
@@ -39,14 +40,12 @@ export const Route = createFileRoute("/sign_up/guide_for_sign_up")({
         <p>
           Man kan også følge med på DDS's hjemmeside, hvor tilmeldingen praktisk
           kommer til at foregå:{" "}
-          <a
+          <TextLink
             href="https://dds.dk/arrangement/plus-start-plus-t-1"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-brand-green underline hover:text-white"
+            external
           >
             https://dds.dk/arrangement/plus-start-plus-t-1
-          </a>
+          </TextLink>
         </p>{" "}
         <br />
         <h2>Punkt 2 - Skal jeg så bare vente til maj?</h2>
@@ -84,23 +83,13 @@ export const Route = createFileRoute("/sign_up/guide_for_sign_up")({
         <ul className="list-inside list-disc space-y-2">
           <li>
             Følg{" "}
-            <a
-              href="https://www.instagram.com/plustspejder/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-brand-green underline hover:text-white"
-            >
+            <TextLink href="https://www.instagram.com/plustspejder/" external>
               @plustspejder
-            </a>{" "}
+            </TextLink>{" "}
             på instagram og{" "}
-            <a
-              href="https://www.facebook.com/plus.t.dds"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-brand-green underline hover:text-white"
-            >
+            <TextLink href="https://www.facebook.com/plus.t.dds" external>
               PLUS T - Seniorkursus i DDS
-            </a>{" "}
+            </TextLink>{" "}
             på Facebook
           </li>
           <li>
