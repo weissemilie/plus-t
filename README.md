@@ -7,6 +7,31 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
+## Image optimization
+
+Images are compressed as part of `npm run build`. The `imageOptimizer` plugin in
+`vite-plugin-image-optimizer.ts` runs after the bundle is written and rewrites
+every JPEG, PNG and WebP in `dist/` — both the assets Vite bundles from `src/`
+and the files copied verbatim from `public/`:
+
+- images larger than 2000px on their longest edge are scaled down
+- JPEGs are re-encoded with mozjpeg (quality 78, progressive), PNGs and WebP at
+  quality 80
+- metadata is stripped, with EXIF orientation baked into the pixels first
+- a file is only replaced when the result is actually smaller
+
+Filenames and formats are unchanged, so nothing that references an image has to
+be updated. Source images in `public/` and `src/assets/` are never touched —
+commit them at full resolution and let the build shrink them.
+
+Results are cached in `node_modules/.cache/image-optimizer`, keyed by file
+contents and settings, so repeat builds only re-encode images that changed. The
+defaults can be adjusted where the plugin is registered in `vite.config.ts`:
+
+```ts
+imageOptimizer({ maxSize: 2000, jpegQuality: 78 })
+```
+
 ## React Compiler
 
 The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
