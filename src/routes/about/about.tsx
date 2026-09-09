@@ -37,7 +37,7 @@ export const Route = createFileRoute("/about/about")({
           <p>
             Det kræver mod, udholdenhed og lysten til at blive udfordret, men
             belønningen er oplevelser, nye venskaber og inspiration til dit
-            videre spejderliv. PLUS T afholdes i uge 42 og er forseniorspejdere
+            videre spejderliv. PLUS T afholdes i uge 42 og er for seniorspejdere
             mellem 16 og 23 år, der kan svømme 200 meter, bære oppakning og er
             klar på årets vildeste efterår.
           </p>

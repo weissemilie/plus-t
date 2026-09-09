@@ -43,7 +43,7 @@ export const Route = createFileRoute("/about/about_course")({
             Det danske efterår kan byde på alt fra solskin til skybrud og nogle
             gange begge dele på samme dag. Hvis tasken skal ud og svømme, duer
             et par poser uden knude ikke. Man skal ikke regne med at kunne tørre
-            sine ting undervejs, så sørg for at pakke alt vandtæt. Aet kan ikke
+            sine ting undervejs, så sørg for at pakke alt vandtæt. Det kan ikke
             understreges nok!
           </p>
           <h2>5. Læs deltagerbrevet</h2>
