@@ -1,5 +1,7 @@
+import { useEffect, useState } from "react";
 import {
   Carousel,
+  type CarouselApi,
   CarouselContent,
   CarouselItem,
   CarouselNext,
@@ -8,11 +10,30 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 
 export default function ImageCarousel() {
+  const [api, setApi] = useState<CarouselApi>();
+
+  // Restart the autoplay timer whenever the slide changes, whether that came
+  // from autoplay itself, the prev/next buttons, a drag, or arrow keys - so
+  // manually navigating never gets immediately overridden by an autoplay
+  // tick left over from before the interaction.
+  useEffect(() => {
+    if (!api) return;
+    const autoplay = api.plugins().autoplay;
+    if (!autoplay) return;
+
+    const resetAutoplay = () => autoplay.reset();
+    api.on("select", resetAutoplay);
+    return () => {
+      api.off("select", resetAutoplay);
+    };
+  }, [api]);
+
   return (
     <Carousel
       className="w-full"
       opts={{ loop: true }}
-      plugins={[Autoplay({ delay: 5000, stopOnInteraction: true })]}
+      plugins={[Autoplay({ delay: 5000, stopOnInteraction: false })]}
+      setApi={setApi}
     >
       <CarouselContent>
         <CarouselItem>

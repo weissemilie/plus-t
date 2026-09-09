@@ -20,7 +20,7 @@ export default function PastCoursesCarousel({
 }: PastCoursesCarouselProps) {
   return (
     <Carousel
-      className="relative mx-auto w-[100vw] max-w-4xl md:w-full"
+      className="relative mx-auto w-full max-w-4xl"
       opts={{ loop: true }}
     >
       <CarouselContent>
