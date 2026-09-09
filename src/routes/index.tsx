@@ -1,5 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import ImageCarousel from "../components/ui/ImageCarousel";
+import { Button } from "@/components/ui/button";
+
+const SIGNUP_URL = "https://medlem.dds.dk/event/id/69596/register";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -28,6 +31,11 @@ export const Route = createFileRoute("/")({
             Det bliver intenst. Det bliver krævende. Det bliver årets vildeste
             efterårsferie! Er du klar?
           </p>
+          <Button asChild size="lg" variant="brand" className="mt-4 rounded-full">
+            <a href={SIGNUP_URL} target="_blank" rel="noopener noreferrer">
+              Tilmeld dig nu
+            </a>
+          </Button>
         </div>
       </div>
 
@@ -43,6 +51,11 @@ export const Route = createFileRoute("/")({
           Det bliver intenst. Det bliver krævende. Det bliver årets vildeste
           efterårsferie! Er du klar?
         </p>
+        <Button asChild size="lg" variant="brand" className="mt-2 rounded-full">
+          <a href={SIGNUP_URL} target="_blank" rel="noopener noreferrer">
+            Tilmeld dig nu
+          </a>
+        </Button>
       </div>
     </div>
   ),
